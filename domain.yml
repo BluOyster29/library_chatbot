@@ -1,0 +1,73 @@
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true
+intents:
+- greet
+- goodbye
+- affirm
+- negative
+- mood_great
+- mood_unhappy
+- bot_challenge
+- opening_times
+- inform_library
+- speak_to_human
+- thanks
+entities:
+- library
+slots:
+  library:
+    type: unfeaturized
+responses:
+  utter_what_can_do:
+  - text: "I am 'LibraryBot'. I have the answers to some common questions, let me\
+      \ know if I can help you. I have information about...\n Opening times If you\
+      \ need help with something else I can get a human to help you :)"
+  utter_greet:
+  - text: Hello!
+  - text: Hej
+  - text: Hello there!
+  utter_passing_to_human:
+  - text: "I will pass you to a human now!\nPlease wait :)"
+  utter_cheer_up:
+  - image: https://i.imgur.com/nGF1K8f.jpg
+    text: 'Here is something to cheer you up:'
+  utter_ask_library:
+  - text: Which library would you like the opening times for?
+  utter_did_that_help:
+  - text: Did that help you?
+  utter_happy:
+  - text: Great, carry on!
+  utter_goodbye:
+  - text: Bye
+  utter_iamabot:
+  - text: I am a bot, powered by Rasa.
+  utter_which_library:
+  - text: Which library would you like to know the opening hours for?
+  - text: For which library?
+  utter_opening_majorna:
+  - text: Due to corona Majorna's library is closed until further notice
+  utter_affirm_library:
+  - text: You want to know the opening times for {library}?
+  utter_your_welcome:
+  - text: You're welcome!
+  - text: No dramas :)
+  - text: That's no problem
+  - text: Pleasure
+actions:
+- action_opening_times_lookup
+- utter_what_can_do
+- utter_greet
+- utter_passing_to_human
+- utter_cheer_up
+- utter_ask_library
+- utter_did_that_help
+- utter_happy
+- utter_goodbye
+- utter_iamabot
+- utter_which_library
+- utter_opening_majorna
+- utter_affirm_library
+- utter_your_welcome
+forms:
+- opening_times_form
