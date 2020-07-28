@@ -6,18 +6,41 @@ intents:
 - goodbye
 - affirm
 - negative
-- mood_great
-- mood_unhappy
-- bot_challenge
 - opening_times
 - inform_library
 - speak_to_human
 - thanks
+- borrow_ebooks
+- read_pc
+- read_mobile
+- mood_unhappy
+- mood_great
+- how_many
+- change_libby_language
+- book_lookup
+- dont_know
+
 entities:
 - library
+- has_card
+- operating_system
+- mobile_os
+- media_format
+- book_author
+- book_title
+
 slots:
+  has_card:
+    type: unfeaturized
   library:
     type: unfeaturized
+  operating_system:
+    type: unfeaturized
+  book_author:
+    type: text
+  book_title:
+    type: text
+
 responses:
   utter_what_can_do:
   - text: "I am 'LibraryBot'. I have the answers to some common questions, let me\
@@ -29,45 +52,59 @@ responses:
   - text: Hello there!
   utter_passing_to_human:
   - text: "I will pass you to a human now!\nPlease wait :)"
-  utter_cheer_up:
-  - image: https://i.imgur.com/nGF1K8f.jpg
-    text: 'Here is something to cheer you up:'
-  utter_ask_library:
-  - text: Which library would you like the opening times for?
-  utter_did_that_help:
-  - text: Did that help you?
-  utter_happy:
-  - text: Great, carry on!
   utter_goodbye:
   - text: Bye
-  utter_iamabot:
-  - text: I am a bot, powered by Rasa.
-  utter_which_library:
+  utter_ask_library:
   - text: Which library would you like to know the opening hours for?
   - text: For which library?
   utter_opening_majorna:
   - text: Due to corona Majorna's library is closed until further notice
   utter_affirm_library:
   - text: You want to know the opening times for {library}?
+  utter_ask_has_card:
+  - text: Do you have a library card?
   utter_your_welcome:
   - text: You're welcome!
   - text: No dramas :)
   - text: That's no problem
   - text: Pleasure
+  utter_ask_operating_system:
+  - text: And do you read on mobile or pc
+  utter_query:
+  - text: You're looking for {book_title} by {book_author}
+  utter_default:
+  - text: I'm sorry i don't think i understood that, can we start again (i am a simply
+      robot)
+  utter_download_ebook:
+  - text: Do you want to download ebooks or audiobooks?
+  utter_how_many_ebooks:
+  - text: you can have a maximum of two ebooks at the same time, but you can have a new one as soon as you return
+  utter_instructions_in_english:
+  - text: I'm afraid the instructions are in English but you can borrow resources in other languges, you just have to search for them
+  utter_ask_book_title:
+  - text: what was the title of the book?
+  utter_ask_book_author:
+  - text: who wrote the book?
 actions:
 - action_opening_times_lookup
 - utter_what_can_do
 - utter_greet
 - utter_passing_to_human
-- utter_cheer_up
-- utter_ask_library
-- utter_did_that_help
-- utter_happy
 - utter_goodbye
-- utter_iamabot
-- utter_which_library
-- utter_opening_majorna
+- utter_ask_library
 - utter_affirm_library
 - utter_your_welcome
+- utter_ask_has_card
+- utter_ask_operating_system
+- utter_opening_majorna
+- utter_default
+- utter_download_ebook
+- utter_how_many_ebooks
+- utter_instructions_in_english
+- utter_ask_book_author
+- utter_ask_book_title
+- utter_ask_isbn
 forms:
 - opening_times_form
+- borrow_ebooks_form
+- book_lookup_form

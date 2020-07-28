@@ -6,9 +6,6 @@
 - good evening
 - hey there
 - hejo
-- thanks
-- cheers
-- nice one
 - hello!
 
 ## intent:thanks
@@ -18,6 +15,10 @@
 - that's great
 - thanks a lot
 - thank you so much
+- thanks
+- cheers
+- nice one
+- awesome thanks
 
 ## intent:affirm
 - yes
@@ -36,7 +37,6 @@
 ## intent:negative
 - no
 - no that's not right
-- no thanks
 - wrong
 - nope
 - noooo
@@ -45,6 +45,15 @@
 - don't like that
 - no way
 - not really
+
+## intent:borrow_ebooks
+- i would like to borrow ebooks
+- how do you borrow ebooks
+- i need help borrowing ebooks
+- can you help me borrow ebooks
+- where do i download ebooks
+- i'd like to borrow ebooks
+- borrow ebooks
 
 ## intent:goodbye
 - bye
@@ -71,6 +80,12 @@
 - i need to talk to a human
 - please pass me on to a human
 
+## intent:how_many
+- how many [ebooks](media_format) can you download?
+- what is the maximum number of [ebooks](media_format) that can be downloaded?
+- what is the total number of [ebooks](media_format) one can borrow
+- how many [ebooks](media_format) can you have at a time
+
 ## intent:mood_unhappy
 - sad
 - very sad
@@ -82,12 +97,6 @@
 - not very good
 - extremely sad
 - so sad
-
-## intent:bot_challenge
-- are you a bot?
-- are you a human?
-- am I talking to a bot?
-- am I talking to a human?
 
 ## intent:opening_times
 - what are the opening times?
@@ -106,6 +115,13 @@
 - I would like to know some opening times please
 - ok opening times for the [stadsbiblioteket](library)
 - opening times please
+- i'd like some opening times please
+
+## intent:change_libby_language
+- how do i change the language of Libbly
+- Libby is in English
+- how to change the language of Libby
+- how change from English in Libby
 
 ## intent:inform_library
 - [majorna](library)
@@ -116,3 +132,34 @@
 - [Lundby](library)
 - [Stadsbiblioteket 300m2](library)
 - [Stadsbiblioteket](library)
+
+## intent:read_mobile
+- i want to read on my mobile
+- mobile
+- phone
+- i'll read on my [android](mobile_os) phone
+- i will use my [iphone](mobile_os)
+
+## intent:read_pc
+- i'll read on my pc
+- pc
+- computer
+- on my laptop
+
+## intent:book_lookup
+- do you have [when the world became figures](book_title) in [2016](date) by [Olivier Rey](book_author)
+- do you have any [Stephen King](book_author) novels?
+- i'm looking for [books](media_format) by [Olga Togarczuk](book_author)
+- i'm looking for a book
+- i want to find a book
+- i'm looking for [Animal Farm](book_title) by [George Orwell](book_author)
+- do you have [Fear and Loathing in Las Vegas](book_title)
+- i wonder if you have [Just Kids](title) by [Patty Smith](book_author)
+- i want to find a book
+
+## intent:dont_know
+- i don't know
+- i'm not sure
+- i dont think I know
+- no
+- i dont have it

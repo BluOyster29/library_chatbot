@@ -11,18 +11,46 @@
  - utter_what_can_do
 * opening_times
  - opening_times_form
- - form{"library" : "opening_times_form"}
- - form{"library" : null}
+ - form{"name" : "opening_times_form"}
+ - form{"name" : null}
 * affirm
  - action_opening_times_lookup
 * thanks
  - utter_your_welcome
 
-## opening times one-shot
- * greet
+## borrow ebooks
+* greet
+ - utter_greet
+ - utter_what_can_do
+* borrow_ebooks
+ -utter_download_ebook
+* affirm
+ - borrow_ebooks_form
+ - form{"name" : "borrow_ebooks_form"}
+ - form{"name": null}
+
+## how many ebooks
+* greet
   - utter_greet
   - utter_what_can_do
- * opening_times
-  - action_opening_times_lookup
- * thanks
-  - utter_your_welcome
+* how_many
+ - utter_how_many_ebooks
+* thanks
+ - utter_your_welcome
+
+## how switch libby language
+* greet
+ - utter_greet
+ - utter_what_can_do
+* change_libby_language
+ - utter_instructions_in_english
+
+## book lookup
+* greet
+ - utter_greet
+ - utter_what_can_do
+* book_lookup
+ - book_lookup_form
+ - form{"name" : "book_lookup_form"}
+ - form{"name": null}
+ - utter_query
