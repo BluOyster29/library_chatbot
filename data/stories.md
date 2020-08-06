@@ -17,6 +17,9 @@
  - action_opening_times_lookup
 * thanks
  - utter_your_welcome
+ - utter_more_help
+* deny
+ - utter_goodbye
 
 ## borrow ebooks
 * greet
@@ -45,12 +48,14 @@
 * change_libby_language
  - utter_instructions_in_english
 
-## book lookup
+## book lookup happy
 * greet
  - utter_greet
  - utter_what_can_do
-* book_lookup
- - book_lookup_form
- - form{"name" : "book_lookup_form"}
- - form{"name": null}
- - utter_query
+* open_request
+ - action_check_query
+* affirm
+ - action_book_lookup
+* inform_isbn
+ - action_book_description
+ 

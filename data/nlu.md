@@ -19,6 +19,8 @@
 - cheers
 - nice one
 - awesome thanks
+- awesome thanks!
+- cool thanks!
 
 ## intent:affirm
 - yes
@@ -33,8 +35,11 @@
 - of course
 - that sounds good
 - correct
+- no sorry i meant the shining
+- yeah I think so
+- yes!
 
-## intent:negative
+## intent:deny
 - no
 - no that's not right
 - wrong
@@ -45,15 +50,18 @@
 - don't like that
 - no way
 - not really
+- no thanks
+- no thank you
+- no it's all good
 
 ## intent:borrow_ebooks
-- i would like to borrow ebooks
-- how do you borrow ebooks
-- i need help borrowing ebooks
-- can you help me borrow ebooks
-- where do i download ebooks
-- i'd like to borrow ebooks
-- borrow ebooks
+- i would like to borrow [ebooks](ebook)
+- how do you borrow [ebooks](ebook)
+- i need help borrowing [ebooks](ebook)
+- can you help me borrow [ebooks](ebook)
+- where do i download [ebooks](ebook)
+- i'd like to borrow [ebooks](ebook)
+- borrow [ebooks](ebook)
 
 ## intent:goodbye
 - bye
@@ -132,6 +140,7 @@
 - [Lundby](library)
 - [Stadsbiblioteket 300m2](library)
 - [Stadsbiblioteket](library)
+- [stadsbiblioteket](library)
 
 ## intent:read_mobile
 - i want to read on my mobile
@@ -146,16 +155,33 @@
 - computer
 - on my laptop
 
-## intent:book_lookup
-- do you have [when the world became figures](book_title) in [2016](date) by [Olivier Rey](book_author)
+## intent:open_request
 - do you have any [Stephen King](book_author) novels?
 - i'm looking for [books](media_format) by [Olga Togarczuk](book_author)
-- i'm looking for a book
-- i want to find a book
 - i'm looking for [Animal Farm](book_title) by [George Orwell](book_author)
 - do you have [Fear and Loathing in Las Vegas](book_title)
-- i wonder if you have [Just Kids](title) by [Patty Smith](book_author)
-- i want to find a book
+- i wonder if you have [Just Kids](book_title) by [Patty Smith](book_author)
+- do you have [when the world becamse figures](book_title) by [Oliver Rey](book_author) from 2016
+- do you have [stephen king](book_author)
+- i wanted to know if you have any [JRR Tolkein](book_author)
+- books by [Stephen king](book_author)
+- do you have [the shining](book_title)
+- i want [the dome](book_title) by [stephen king](book_title)
+- I'm looking for [books](media_format) by[Robbie Williams](book_author)
+- a [book](media_format) named [Flights](book_title)
+- I am looking for the [book](media_format) [Flights](book_title), I cant remember the author though
+- Do you have [Flights](book_title)??
+- I am looking for the [book](media_format) [The Witcher](book_title)
+- I'm looking for the [book](media_format) [The Shining](book_title)
+- I'm looking for [Just Kids](book_title) by [Patti Smith](book_author)
+- Do you have [Just Kids](book_title) by [Patti Smith](book_author)?
+- [Patti Smith](book_author)
+- do you have [books](media_format) by [patti smith](book_author)?
+- what [books](media_format) do you have by [olga tokarczuk](book_author)
+- do you have [Alex Rider](book_title) [books](media_format) by [Anthony Horowitz](book_author)
+
+## intent:book_lookup
+- i want to borrow a book by [stephen king](book_author)
 
 ## intent:dont_know
 - i don't know
@@ -163,3 +189,16 @@
 - i dont think I know
 - no
 - i dont have it
+
+## intent:inform_booktitle
+- the shinning
+
+## intent:inform_isbn
+- [9482758392](isbn)
+- [5264625323](isbn)
+- [9475365357](isbn)
+- [8674564575](isbn)
+ -[8795867568](isbn)
+
+## regex:isbn
+- [0-9]{10,13}
