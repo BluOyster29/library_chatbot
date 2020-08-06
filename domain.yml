@@ -5,7 +5,7 @@ intents:
 - greet
 - goodbye
 - affirm
-- negative
+- deny
 - opening_times
 - inform_library
 - speak_to_human
@@ -17,43 +17,48 @@ intents:
 - mood_great
 - how_many
 - change_libby_language
-- book_lookup
+- open_request
 - dont_know
-
+- inform_booktitle
+- book_lookup
+- inform_isbn
 entities:
 - library
 - has_card
 - operating_system
 - mobile_os
-- media_format
+- ebook
 - book_author
 - book_title
-
+- media_format
+- isbn
 slots:
+  book_author:
+    type: unfeaturized
+  book_title:
+    type: unfeaturized
   has_card:
     type: unfeaturized
   library:
     type: unfeaturized
+  mini_bookdb:
+    type: unfeaturized
   operating_system:
     type: unfeaturized
-  book_author:
-    type: text
-  book_title:
-    type: text
-
+  requested_slot:
+    type: unfeaturized
+slot:
+  isbn:
+    unfeaturized
 responses:
   utter_what_can_do:
-  - text: "I am 'LibraryBot'. I have the answers to some common questions, let me\
-      \ know if I can help you. I have information about...\n Opening times If you\
-      \ need help with something else I can get a human to help you :)"
+  - text: "Hello, I am LibraryBot2000.\nWhat can I help with?"
   utter_greet:
   - text: Hello!
   - text: Hej
   - text: Hello there!
   utter_passing_to_human:
   - text: "I will pass you to a human now!\nPlease wait :)"
-  utter_goodbye:
-  - text: Bye
   utter_ask_library:
   - text: Which library would you like to know the opening hours for?
   - text: For which library?
@@ -78,19 +83,40 @@ responses:
   utter_download_ebook:
   - text: Do you want to download ebooks or audiobooks?
   utter_how_many_ebooks:
-  - text: you can have a maximum of two ebooks at the same time, but you can have a new one as soon as you return
+  - text: you can have a maximum of two ebooks at the same time, but you can have
+      a new one as soon as you return
   utter_instructions_in_english:
-  - text: I'm afraid the instructions are in English but you can borrow resources in other languges, you just have to search for them
+  - text: I'm afraid the instructions are in English but you can borrow resources
+      in other languges, you just have to search for them
   utter_ask_book_title:
   - text: what was the title of the book?
   utter_ask_book_author:
   - text: who wrote the book?
+  utter_more_help:
+  - text: Would you like some more help?
+  - text: Is there anything else I can help with?
+  - text: Would you like anymore info?
+  utter_goodbye:
+  - text: Goodbye!
+  - text: Bye :D
+  utter_looking_up:
+  - text: I will just look that up for you
+  - text: Looking now :)
+  utter_lookup_another:
+  - text: Would you like to look for another?
+  - text: Shall we look up another?
+  utter_what_help:
+  - text: How can I help?
+  - text: What can I do to help?
+  - text: What would you like to know?
 actions:
 - action_opening_times_lookup
+- action_check_query
+- action_book_lookup
+- action_book_description
 - utter_what_can_do
 - utter_greet
 - utter_passing_to_human
-- utter_goodbye
 - utter_ask_library
 - utter_affirm_library
 - utter_your_welcome
@@ -103,8 +129,12 @@ actions:
 - utter_instructions_in_english
 - utter_ask_book_author
 - utter_ask_book_title
-- utter_ask_isbn
+- utter_query
+- utter_more_help
+- utter_goodbye
+- utter_looking_up
+- utter_lookup_another
+- utter_what_help
 forms:
 - opening_times_form
 - borrow_ebooks_form
-- book_lookup_form
