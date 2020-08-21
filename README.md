@@ -1,2 +1,2 @@
 # library_chatbot
-A repo for experimenting a prototype for a virtual librarian chatbot
+A virtual librarian built with RASA as a prototype for the City Library in Gothenburg
